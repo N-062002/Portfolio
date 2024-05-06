@@ -95,6 +95,7 @@ section{
 }
 
 .download:hover{
+  color: #fff;
   background-color: #73b9ef;
 }
 
@@ -172,9 +173,11 @@ section{
 
 .tabs{
   max-width: 300vw;
+  height: 200px;
   font-size: 1.4rem;
   margin-top: 20px;
   word-spacing: 7vw;
+  padding: 20px;
 
   /* usinf flex */
   display: flex;
@@ -182,6 +185,7 @@ section{
   align-items: center;
   /* background-color: red; */
 }
+
 
 /* .tabs a{
   margin: 6px;
@@ -198,6 +202,9 @@ section{
 
 .tabs li:hover{
   cursor: pointer;
+  /* padding: 20px;
+  border-radius: .5rem;
+  background-color: #2e2f2f; */
 }
 
 li.active-tab {
@@ -281,6 +288,24 @@ li.active-tab {
 /* Media Query */
 
 
+.skill-card{
+  width: 100%;
+  height: 300px;
+  background-color: lightgreen;
+}
+
+.project-card{
+  width: 100%;
+  height: 300px;
+  background-color: lightblue;
+}
+
+.certificate-card{
+  width: 100%;
+  height: 300px;
+  background-color: red;
+}
+
 @media(max-width: 320px) {
   .bio{
       padding: 8vh 20px;
@@ -312,29 +337,133 @@ li.active-tab {
       flex-direction: column;
   }
 
-  .item-grid {
+  .skills {
       display: flex;
       flex-direction: column;
   }
 
-  .card {
-      height: 25vh;
+  .projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.certificates {
+  display: flex;
+  flex-direction: column;
+}
+
+    .skill-card{
+    border-radius: .5rem;
+
+  }
+
+  .project-card{
+    border-radius: .5rem;
+
+  }
+
+  .certificate-card{
+    border-radius: .5rem;
+
   }
   
 }
 
 
-@media(max-width: 768px) {
+@media(min-width: 768px) {
   .bio {
       padding: 11vh 200px;
       /* flex-direction: column; */
   }
+
+  .skills{
+    /* Using Grid */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 20px;
+  }
+
+    .skill-card{
+    height: 300px;
+    border-radius: .5rem;
+
+  }
+
+  .projects{
+    /* Using Grid */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 20px;
+  }
+
+    .project-card{
+    height: 300px;
+    border-radius: .5rem;
+
+  }
+
+  .certificates{
+    /* Using Grid */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 20px;
+  }
+
+    .certificate-card{
+    height: 300px;
+    border-radius: .5rem;
+
+  }
 }
 
 
-@media (min-width: 770px){
+@media (min-width: 1024px){
   .bio{
       flex-direction: row;
+  }
+
+  .skills{
+    /* Using Grid */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 20px;
+  }
+
+  .skill-card{
+    height: 300px;
+    border-radius: .5rem;
+
+  }
+
+  .projects{
+    /* Using Grid */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 20px;
+  }
+
+  .project-card{
+    height: 300px;
+    border-radius: .5rem;
+
+  }
+
+  .certificates{
+    /* Using Grid */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto,1fr);
+    gap: 20px;
+  }
+
+  .certificate-card{
+    height: 300px;
+    border-radius: .5rem;
   }
 
   .tabs a{
@@ -349,25 +478,6 @@ li.active-tab {
   background-color: red;
 } */
 
-.skill-card{
-  width: 100%;
-  height: 300px;
-  background-color: lightgreen;
-}
-
-.project-card{
-  width: 100%;
-  height: 300px;
-  background-color: lightblue;
-}
-
-
-
-.certificate-card{
-  width: 100%;
-  height: 20vw;
-  background-color: red;
-}
 
 .content{
   color: white;
@@ -381,5 +491,9 @@ li.active-tab {
 
 .active-tab{
   color: white;
+  padding: 20px;
+  border-radius: .5rem;
+  background-color: #2e2f2f;
   text-decoration: underline 10px #5db0f4;
 }
+
