@@ -318,7 +318,7 @@ li.active-tab {
   }
 } */
 
-@media(max-width: 450px) {
+@media(max-width: 500px) {
 
   .bio {
       padding: 8vh 200px;
@@ -353,6 +353,7 @@ li.active-tab {
 }
 
     .skill-card{
+    /* height: 300px; */
     border-radius: .5rem;
 
   }
@@ -367,6 +368,17 @@ li.active-tab {
 
   }
   
+}
+
+@media(min-width: 765px) {
+  .skills {
+    gap: 5px;
+}
+.skill-card{
+  height: 220px;
+  border-radius: .5rem;
+
+}
 }
 
 
